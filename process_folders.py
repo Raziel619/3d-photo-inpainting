@@ -1,4 +1,5 @@
 import os
+import random
 import subprocess
 import sys
 import time
@@ -6,6 +7,7 @@ import time
 if __name__ == "__main__":
     input_dir = sys.argv[1]
     dirs = [f.path for f in os.scandir(input_dir) if f.is_dir()]
+    random.shuffle(dirs)
 
     for x in dirs:
         file_count = len([f for f in os.listdir(x) if os.path.isfile(os.path.join(x, f))])
