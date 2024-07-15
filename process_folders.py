@@ -11,7 +11,7 @@ if __name__ == "__main__":
 
     for x in dirs:
         file_count = len([f for f in os.listdir(x) if os.path.isfile(os.path.join(x, f))])
-        if "_ls" in x or file_count > 1:
+        if "_ls" in x or "_nov" in x or file_count > 1:
             continue
 
         print(f"Processing - {x}")
